@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Lanet.TV</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="/img/favicon.svg">
+	<link rel="shortcut icon" href="/img/lanettvlogo.svg" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/img/lanettvlogo.svg">
+	<link rel="apple-touch-icon" sizes="72x72" href="/img/lanettvlogo.svg">
+	<link rel="apple-touch-icon" sizes="114x114" href="/img/lanettvlogo.svg">
+	<link rel="icon" type="image/x-icon" href="/img/lanettvlogo.svg">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="/stylesheets/main.min.css">
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__top">
+				<div class="container">
+					<a href="" class="logo">
+						<img src="/img/lanetlogo.svg" alt="">
+					</a>
+				</div>
+			</div>
+			<div class="header__mid">
+				<div class="container">
+					<h3 class="subtitle"> <%= data.static.toptext %></h3></h3>
+					<div class="header__mid__content">
+						<div class="left__side">
+							<div class="channel-block">
+									<img src="<%= data.imgSrc %>" alt="">
+									<p><%= data.formatTitle %> <span><%= data.name %></span></p>
+							</div>
+
+						</div>
+						<div class="right__side">
+							<p class="description"><%= data.description %> 
+							</p>
+							<a href="//lanet.tv" class="watch-online"><%= data.static.topBtn %></a>
+						</div>						
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="main" id="main">
+			<div class="popular wrap">
+				<div class="container">
+					<h2><%= data.static.popularTitle %></h2>
+					<div class="popular__box">
+						<div class="channels__list">
+								<div class="search-box">
+										<input type="text" id="search" class="search" placeholder="Поиск">
+								</div>
+							
+							<!-- <ul>
+								<li class="channel__item">
+									<img src="/img/channels/1001.svg" alt="">
+								</li>
+								<li class="channel__item">
+									<img src="/img/channels/1002.svg" alt="">
+								</li>
+								<li class="channel__item">
+									<img src="/img/channels/1003.svg" alt="">
+								</li>
+								<li class="channel__item">
+									<img src="/img/channels/1004.svg" alt="">
+								</li>
+								<li class="channel__item">
+									<img src="/img/channels/1001.svg" alt="">
+								</li>
+								<li class="channel__item">
+									<img src="/img/channels/1002.svg" alt="">
+								</li>
+								<li class="channel__item">
+									<img src="/img/channels/1003.svg" alt="">
+								</li>
+								<li class="channel__item">
+									<img src="/img/channels/1004.svg" alt="">
+								</li>
+
+								<li class="channel__item">
+									<img src="/img/channels/1001.svg" alt="">
+								</li>
+								<li class="channel__item">
+									<img src="/img/channels/1002.svg" alt="">
+								</li>
+								<li class="channel__item">
+									<img src="/img/channels/1003.svg" alt="">
+								</li>
+								<li class="channel__item">
+									<img src="/img/channels/1004.svg" alt="">
+								</li>
+						
+								<li class="channel__item">
+									<img src="/img/channels/1001.svg" alt="">
+								</li>
+								<li class="channel__item">
+									<img src="/img/channels/1002.svg" alt="">
+								</li>
+								<li class="channel__item">
+									<img src="/img/channels/1003.svg" alt="">
+								</li>
+								<li class="channel__item">
+									<img src="/img/channels/1004.svg" alt="">
+								</li>
+
+								<li class="channel__item">
+									<img src="/img/channels/1001.svg" alt="">
+								</li>
+								<li class="channel__item">
+									<img src="/img/channels/1002.svg" alt="">
+								</li>
+								<li class="channel__item">
+									<img src="/img/channels/1003.svg" alt="">
+								</li>
+								<li class="channel__item">
+									<img src="/img/channels/1004.svg" alt="">
+								</li>
+
+								<li class="channel__item">
+									<img src="/img/channels/1001.svg" alt="">
+								</li>
+								<li class="channel__item">
+									<img src="/img/channels/1002.svg" alt="">
+								</li>
+								<li class="channel__item">
+									<img src="/img/channels/1003.svg" alt="">
+								</li>
+								<li class="channel__item">
+									<img src="/img/channels/1004.svg" alt="">
+								</li>
+
+								<li class="channel__item">
+									<img src="/img/channels/1001.svg" alt="">
+								</li>
+								<li class="channel__item">
+									<img src="/img/channels/1002.svg" alt="">
+								</li>
+								<li class="channel__item">
+									<img src="/img/channels/1003.svg" alt="">
+								</li>
+								<li class="channel__item">
+									<img src="/img/channels/1004.svg" alt="">
+								</li>
+
+								<li class="channel__item">
+									<img src="/img/channels/1001.svg" alt="">
+								</li>
+								<li class="channel__item">
+									<img src="/img/channels/1002.svg" alt="">
+								</li>
+								<li class="channel__item">
+									<img src="/img/channels/1003.svg" alt="">
+								</li>
+								<li class="channel__item">
+									<img src="/img/channels/1004.svg" alt="">
+								</li>
+							</ul> -->
+							<ul>
+								<% for(var i = 0; i < dataChannels.length; i++) {%> 
+									<li class="channel__item"> 
+										<a href="<%= dataChannels[i].uri %>">
+												<img src="<%= dataChannels[i].imgSrc %>" alt="">
+										</a>
+										
+									</li>
+								<% } %>
+							</ul>
+								
+						</div>
+						<div class="genre__list" >
+							<ul id="genre__list">
+								<% for(var i = 0; i < genres.length; i++) {%> 
+									<%if (genres[i].isActive) { %>
+									<li class="active-genre" onClick = "show()" > 
+										<span data-format="<%= genres[i].formatId %>">
+											<%= genres[i].title %>
+										</span>
+									</li>
+									<% } else{ %>  
+										<li  data-format="<%= genres[i].formatId %>"> 
+											<span data-format="<%= genres[i].formatId %>">
+												<%= genres[i].title %>
+											</span>
+										</li>
+									<% } %>
+								<% } %>
+							</ul>
+
+							<!-- <ul>
+								<li class="active-genre">
+								
+										<span>Все каналы</span>	
+								
+									
+								</li>
+								<li>
+								
+										<span>Новости</span>
+								
+								</li>
+								<li>
+								
+										<span>Детям</span>	
+									
+								</li>
+								<li>
+								
+										<span>Спорт</span>
+										
+								</li>
+								<li>
+								
+										<span>Познавательное</span> 
+									
+								</li>
+								<li>
+									
+										<span>Кино и сериалы</span> 
+								
+								</li>
+								<li>
+								
+										<span>Музыка</span>
+								
+								</li>
+								<li>
+								
+										<span>HD</span>
+								
+								</li>
+								<li>
+									
+										<span>Общеформатные</span>
+								
+								</li>
+							</ul> -->
+
+							<div class="select-genre">
+								<select name="" id="">
+									<option value=""><span>Все каналы</span>	</option>
+									<option value=""><span>Новости</span>	</option>
+									<option value=""><span>Детям</span>		</option>
+									<option value=""><span>Спорт</span>	</option>
+									<option value=""><span>Познавательное</span> 	</option>
+									<option value=""><span>Кино и сериалы</span> 	</option>
+									<option value=""><span>Музыка</span>	</option>
+									<option value=""><span>HD</span>	</option>
+									<option value=""><span>Общеформатные</span>	</option>
+
+								</select>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+			<div class="to-watch">
+				<div class="container">
+					<div class="watch-box">
+						<p><%= data.static.popularAuthTitle %>  </p>
+						<a href="//lanet.tv" class="watch-online">Смотреть онлайн</a>
+					</div>
+				</div>
+				
+			</div>
+			<div class="juicy wrap">
+				<div class="container">
+					<div class="juicy__box">
+						<div class="item juicy-img img-first">
+							<img src="/img/device/devicesnew.png" alt="">
+						</div>
+
+						<div class="item juicy-text text-first">
+							<h3><%= data.static.juicyTitle1 %></h3>
+							<p><%= data.static.juicyDesc1 %>	</p>
+							<div class="btn-block">
+								<a href="" class="web-watch">
+									<span class="web-top"><%= data.static.juicyBtnWebTop %></span>
+									<span class="web-bot"><%= data.static.topBtn %></span>
+								</a>
+	
+								<a href="" class="google-watch">
+									<img src="/img/google-play-badge_ru.svg" alt="">
+								</a>
+							</div>
+
+						</div>
+
+						<div class="item juicy-text text-last">
+							<h3><%= data.static.juicyTitle2 %></h3>
+							<p><%= data.static.juicyDesc2 %>	</p>
+							<a href="//lanet.tv" class="watch-now">
+								<%= data.static.juicyBtn %>  
+							</a>						
+						</div>
+	
+						<div class="item juicy-img img-last">
+							<img src="/img/device/phone1.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="advantages wrap">
+				<div class="container">
+					<h2><%= data.static.advTitle %> </h2>
+
+					<div class="advantages__box">
+						<div class="item">
+							<img src="/img/adv/1.svg" alt="">
+							<div class="text">
+								<h3><%= data.static.advItemOneTitle %></h3>
+								<p><%= data.static.advItemOneDesc %></p>
+							</div>
+							
+						</div>
+						<div class="item">
+							<img src="/img/adv/2.svg" alt="">
+							<div class="text">
+								<h3><%= data.static.advItemTwoTitle %></h3>
+								<p><%= data.static.advItemTwoDesc %></p>
+							</div>
+							
+						</div>
+
+						<div class="item">
+							<img src="/img/adv/3.svg" alt="">
+							<div class="text">
+								<h3><%= data.static.advItemThreeTitle %></h3>
+								<p><%= data.static.advItemThreeDesc %></p>
+							</div>
+							
+						</div>
+
+						<div class="item">
+							<img src="/img/adv/4.svg" alt="">
+							<div class="text">
+								<h3><%= data.static.advItemFourTitle %></h3>
+								<p><%= data.static.advItemFourDesc %></p>
+							</div>
+							
+						</div>
+
+						<div class="item">
+							<img src="/img/adv/5.svg" alt="">
+							<div class="text">
+								<h3><%= data.static.advItemFiveTitle %></h3>
+								<p><%= data.static.advItemFiveDesc %></p>
+							</div>
+							
+						</div>
+
+						<div class="item">
+							<img src="/img/adv/6.svg" alt="">
+							<div class="text">
+								<h3><%= data.static.advItemSixTitle %></h3>
+								<p><%= data.static.advItemSixDesc %></p>
+							</div>
+							
+						</div>
+					</div>
+					<div class="btn-block">
+						<a href="//lanet.tv" class="watch-now">
+							<%= data.static.juicyBtn %>  
+						</a>
+					</div>
+
+				</div>
+				
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<div class="content">
+					<div class="text">
+						<p>
+							<%= data.static.footerTitle %>  
+						</p>
+					</div>
+				
+					<div class="social">
+						<a href="https://www.facebook.com/lanet.tv/">
+							<img src="/img/soc/facebook-logo.svg" alt="">
+						</a>
+						<a href="https://www.instagram.com/lanetua/">
+							<img src="/img/soc/instagram-logo.svg" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+	</div>
+
+
+<script src="/javascripts/script.js"></script>
+</body>
+</html>
