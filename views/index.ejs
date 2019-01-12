@@ -5,8 +5,8 @@
 
 	<meta charset="utf-8">
 
-	<title>Lanet.TV</title>
-	<meta name="description" content="">
+	<title><%= data.name %></title>
+	<meta name="description" content="<%= data.description %>">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -66,197 +66,19 @@
 					<h2><%= data.static.popularTitle %></h2>
 					<div class="popular__box">
 						<div class="channels__list">
-								<div class="search-box">
-										<input type="text" id="search" class="search" placeholder="Поиск">
-								</div>
-							
-							<!-- <ul>
-								<li class="channel__item">
-									<img src="/img/channels/1001.svg" alt="">
-								</li>
-								<li class="channel__item">
-									<img src="/img/channels/1002.svg" alt="">
-								</li>
-								<li class="channel__item">
-									<img src="/img/channels/1003.svg" alt="">
-								</li>
-								<li class="channel__item">
-									<img src="/img/channels/1004.svg" alt="">
-								</li>
-								<li class="channel__item">
-									<img src="/img/channels/1001.svg" alt="">
-								</li>
-								<li class="channel__item">
-									<img src="/img/channels/1002.svg" alt="">
-								</li>
-								<li class="channel__item">
-									<img src="/img/channels/1003.svg" alt="">
-								</li>
-								<li class="channel__item">
-									<img src="/img/channels/1004.svg" alt="">
-								</li>
-
-								<li class="channel__item">
-									<img src="/img/channels/1001.svg" alt="">
-								</li>
-								<li class="channel__item">
-									<img src="/img/channels/1002.svg" alt="">
-								</li>
-								<li class="channel__item">
-									<img src="/img/channels/1003.svg" alt="">
-								</li>
-								<li class="channel__item">
-									<img src="/img/channels/1004.svg" alt="">
-								</li>
-						
-								<li class="channel__item">
-									<img src="/img/channels/1001.svg" alt="">
-								</li>
-								<li class="channel__item">
-									<img src="/img/channels/1002.svg" alt="">
-								</li>
-								<li class="channel__item">
-									<img src="/img/channels/1003.svg" alt="">
-								</li>
-								<li class="channel__item">
-									<img src="/img/channels/1004.svg" alt="">
-								</li>
-
-								<li class="channel__item">
-									<img src="/img/channels/1001.svg" alt="">
-								</li>
-								<li class="channel__item">
-									<img src="/img/channels/1002.svg" alt="">
-								</li>
-								<li class="channel__item">
-									<img src="/img/channels/1003.svg" alt="">
-								</li>
-								<li class="channel__item">
-									<img src="/img/channels/1004.svg" alt="">
-								</li>
-
-								<li class="channel__item">
-									<img src="/img/channels/1001.svg" alt="">
-								</li>
-								<li class="channel__item">
-									<img src="/img/channels/1002.svg" alt="">
-								</li>
-								<li class="channel__item">
-									<img src="/img/channels/1003.svg" alt="">
-								</li>
-								<li class="channel__item">
-									<img src="/img/channels/1004.svg" alt="">
-								</li>
-
-								<li class="channel__item">
-									<img src="/img/channels/1001.svg" alt="">
-								</li>
-								<li class="channel__item">
-									<img src="/img/channels/1002.svg" alt="">
-								</li>
-								<li class="channel__item">
-									<img src="/img/channels/1003.svg" alt="">
-								</li>
-								<li class="channel__item">
-									<img src="/img/channels/1004.svg" alt="">
-								</li>
-
-								<li class="channel__item">
-									<img src="/img/channels/1001.svg" alt="">
-								</li>
-								<li class="channel__item">
-									<img src="/img/channels/1002.svg" alt="">
-								</li>
-								<li class="channel__item">
-									<img src="/img/channels/1003.svg" alt="">
-								</li>
-								<li class="channel__item">
-									<img src="/img/channels/1004.svg" alt="">
-								</li>
-							</ul> -->
-							<ul>
-								<% for(var i = 0; i < dataChannels.length; i++) {%> 
-									<li class="channel__item"> 
-										<a href="<%= dataChannels[i].uri %>">
-												<img src="<%= dataChannels[i].imgSrc %>" alt="">
-										</a>
-										
-									</li>
-								<% } %>
-							</ul>
-								
+							<div class="search-box">
+									<input type="text" id="search" class="search" placeholder="Поиск">
+							</div>
+							<ul id="list-channels">
+							</ul>			
 						</div>
 						<div class="genre__list" >
-							<ul id="genre__list">
-								<% for(var i = 0; i < genres.length; i++) {%> 
-									<%if (genres[i].isActive) { %>
-									<li class="active-genre" onClick = "show()" > 
-										<span data-format="<%= genres[i].formatId %>">
-											<%= genres[i].title %>
-										</span>
-									</li>
-									<% } else{ %>  
-										<li  data-format="<%= genres[i].formatId %>"> 
-											<span data-format="<%= genres[i].formatId %>">
-												<%= genres[i].title %>
-											</span>
-										</li>
-									<% } %>
-								<% } %>
+							<ul id="list-genres">
 							</ul>
 
-							<!-- <ul>
-								<li class="active-genre">
-								
-										<span>Все каналы</span>	
-								
-									
-								</li>
-								<li>
-								
-										<span>Новости</span>
-								
-								</li>
-								<li>
-								
-										<span>Детям</span>	
-									
-								</li>
-								<li>
-								
-										<span>Спорт</span>
-										
-								</li>
-								<li>
-								
-										<span>Познавательное</span> 
-									
-								</li>
-								<li>
-									
-										<span>Кино и сериалы</span> 
-								
-								</li>
-								<li>
-								
-										<span>Музыка</span>
-								
-								</li>
-								<li>
-								
-										<span>HD</span>
-								
-								</li>
-								<li>
-									
-										<span>Общеформатные</span>
-								
-								</li>
-							</ul> -->
-
 							<div class="select-genre">
-								<select name="" id="">
-									<option value=""><span>Все каналы</span>	</option>
+								<select name="" id="select-genres" onchange="selectingGenres(this)">
+									<!-- <option value=""><span>Все каналы</span>	</option>
 									<option value=""><span>Новости</span>	</option>
 									<option value=""><span>Детям</span>		</option>
 									<option value=""><span>Спорт</span>	</option>
@@ -264,7 +86,7 @@
 									<option value=""><span>Кино и сериалы</span> 	</option>
 									<option value=""><span>Музыка</span>	</option>
 									<option value=""><span>HD</span>	</option>
-									<option value=""><span>Общеформатные</span>	</option>
+									<option value=""><span>Общеформатные</span>	</option> -->
 
 								</select>
 							</div>
@@ -411,8 +233,12 @@
 		</footer>
 		
 	</div>
+	
+<script>	
 
-
+	let arrChannels = <%- allArr %>;
+	
+</script>
 <script src="/javascripts/script.js"></script>
 </body>
 </html>

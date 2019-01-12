@@ -2179,14 +2179,15 @@ h6 {
 
 @media screen and (max-width:1199px) {
     .wrapper .main .popular__box .channels__list ul {
-        height: 730px;
+        max-height: 730px;
         width: 515px
     }
 }
 
 @media screen and (max-width:768px) {
     .wrapper .main .popular__box .channels__list ul {
-        height: 420px;
+        max-height: 420px;
+        height: auto;
         width: 100%;
         -webkit-box-pack: start;
         -webkit-justify-content: flex-start;
@@ -2400,7 +2401,7 @@ h6 {
 
 @media screen and (max-width:1199px) {
     .wrapper .main .popular__box .genre__list ul li span {
-        font-size: 24px
+        font-size: 20px
     }
 }
 
@@ -3396,4 +3397,16 @@ h6 {
     font-size: 14px;
     line-height: 24px;
     opacity: .6
+}
+
+
+.channel__item {
+    transition: all 0.5s;
+    animation: .7s show;
+
+}
+@keyframes show {
+    0% {opacity: 0;transform: translateY(-10px);}
+    90% {transform: translateY(3px);}
+    100% {opacity: 1;transform: translateY(0px);}
 }
